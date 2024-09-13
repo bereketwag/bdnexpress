@@ -1,0 +1,321 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BDN Express</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Navigation Section -->
+<nav class="bg-white py-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <img src="img/logo.png" alt="BDN Express Logo" class="h-10 w-auto">
+    </div>
+    
+    <!-- Menu Items (hidden on mobile) -->
+    <div class="hidden md:flex space-x-8">
+      <a href="#" class="nav-item text-gray-800 hover:text-red-500">Home</a>
+      <a href="#" class="nav-item text-gray-800 hover:text-red-500">About</a>
+      <a href="#" class="nav-item text-gray-800 hover:text-red-500">Services</a>
+      <a href="#" class="nav-item text-gray-800 hover:text-red-500">Pricing</a>
+      <a href="#" class="nav-item text-gray-800 hover:text-red-500">Blog</a>
+      <a href="#" class="nav-item text-gray-800 hover:text-red-500">Contact</a>
+    </div>
+    
+    <!-- Buttons: Sign In and Call Center -->
+    <div class="hidden md:flex space-x-4">
+      <!-- Sign In Button -->
+      <a href="#" class="px-4 py-2 border border-gray-300 text-gray-800 rounded hover:bg-gray-100 transition duration-300 ease-in-out">Sign In</a>
+      <!-- Call Center Button -->
+      <a href="tel:+123456789" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition duration-300 ease-in-out">Call Center</a>
+    </div>
+    
+    <!-- Hamburger Menu (visible on mobile) -->
+    <div class="md:hidden">
+      <button id="mobile-menu-toggle" class="text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+    <a href="#" class="block nav-item text-gray-800 hover:text-red-500 py-2 px-4">Home</a>
+    <a href="#" class="block nav-item text-gray-800 hover:text-red-500 py-2 px-4">About</a>
+    <a href="#" class="block nav-item text-gray-800 hover:text-red-500 py-2 px-4">Services</a>
+    <a href="#" class="block nav-item text-gray-800 hover:text-red-500 py-2 px-4">Pricing</a>
+    <a href="#" class="block nav-item text-gray-800 hover:text-red-500 py-2 px-4">Blog</a>
+    <a href="#" class="block nav-item text-gray-800 hover:text-red-500 py-2 px-4">Contact</a>
+    <!-- Mobile Buttons -->
+    <a href="#" class="block nav-item text-gray-800 hover:bg-gray-100 py-2 px-4">Sign In</a>
+    <a href="tel:+123456789" class="block nav-item text-white bg-red-500 hover:bg-red-600 py-2 px-4">Call Center</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-cover bg-center h-screen" style="background-image: url('img/hero-bg.jpg');">
+  <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+    <div class="text-center text-white">
+      <!-- Headline -->
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Fast & Reliable Delivery, Worldwide</h1>
+      
+      <!-- Subheading -->
+      <p class="text-lg md:text-2xl mb-8">From packages to food, we deliver with speed and care.</p>
+      
+      <!-- Call to Action Button -->
+      <a href="#" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded border border-gray-300">Request Delivery</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-12 bg-gray-100">
+  <div class="container mx-auto text-center">
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+    
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Service 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <i class="fas fa-plane-departure fa-3x text-red-500"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">International Shipping</h3>
+        <p class="text-gray-600">Reliable and fast international delivery for all your needs, whether it's packages or documents.</p>
+        <a href="#" class="text-red-500 hover:underline mt-4 inline-block">Learn More</a>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <i class="fas fa-truck fa-3x text-red-500"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">National Delivery</h3>
+        <p class="text-gray-600">Efficient and dependable delivery services across the nation for packages and food items.</p>
+        <a href="#" class="text-red-500 hover:underline mt-4 inline-block">Learn More</a>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <i class="fas fa-utensils fa-3x text-red-500"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Food Delivery</h3>
+        <p class="text-gray-600">Quick and secure food delivery service to bring your meals right to your door.</p>
+        <a href="#" class="text-red-500 hover:underline mt-4 inline-block">Learn More</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-12 bg-white">
+  <div class="container mx-auto text-center">
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold mb-8">Our Pricing</h2>
+    
+    <!-- Pricing Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Basic Plan -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Basic Plan</h3>
+        <p class="text-xl font-bold mb-4">$29 / month</p>
+        <ul class="text-left mb-6">
+          <li class="mb-2">Up to 10 packages per month</li>
+          <li class="mb-2">Standard delivery times</li>
+          <li class="mb-2">Email support</li>
+        </ul>
+        <a href="#" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Get Started</a>
+      </div>
+      
+      <!-- Standard Plan -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Standard Plan</h3>
+        <p class="text-xl font-bold mb-4">$59 / month</p>
+        <ul class="text-left mb-6">
+          <li class="mb-2">Up to 30 packages per month</li>
+          <li class="mb-2">Priority delivery times</li>
+          <li class="mb-2">Phone and email support</li>
+        </ul>
+        <a href="#" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Get Started</a>
+      </div>
+      
+      <!-- Premium Plan -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Premium Plan</h3>
+        <p class="text-xl font-bold mb-4">$99 / month</p>
+        <ul class="text-left mb-6">
+          <li class="mb-2">Unlimited packages</li>
+          <li class="mb-2">Express delivery times</li>
+          <li class="mb-2">24/7 support</li>
+        </ul>
+        <a href="#" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- About Us Section -->
+<section id="about" class="py-12 bg-gray-100">
+  <div class="container mx-auto text-center">
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold mb-8">About Us</h2>
+    
+    <!-- Company Overview -->
+    <div class="mb-12">
+      <p class="text-lg md:text-xl leading-relaxed mb-6">
+        At BDN EXPRESS, we pride ourselves on delivering fast and reliable logistics solutions both internationally and nationally. Founded with a mission to provide exceptional delivery services, we handle packages and food with care and efficiency. Our dedicated team works tirelessly to ensure every delivery meets our high standards of service.
+      </p>
+      <p class="text-lg md:text-xl leading-relaxed">
+        Our commitment to excellence is reflected in our core values of integrity, reliability, and customer satisfaction. We strive to exceed expectations and build lasting relationships with our clients.
+      </p>
+    </div>
+    
+    <!-- Team Section -->
+    <h3 class="text-2xl font-bold mb-6">Meet Our Team</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Team Member 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <img src="img/team-member-1.jpg" alt="Team Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
+        <h4 class="text-xl font-semibold mb-2">John Doe</h4>
+        <p class="text-gray-600">Founder & CEO</p>
+        <p class="mt-2">John has over 20 years of experience in the logistics industry, leading BDN EXPRESS with a vision of global excellence.</p>
+      </div>
+      
+      <!-- Team Member 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <img src="img/team-member-2.jpg" alt="Team Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
+        <h4 class="text-xl font-semibold mb-2">Jane Smith</h4>
+        <p class="text-gray-600">Operations Manager</p>
+        <p class="mt-2">Jane oversees daily operations, ensuring our logistics processes are smooth and efficient for every delivery.</p>
+      </div>
+      
+      <!-- Team Member 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <img src="img/team-member-3.jpg" alt="Team Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
+        <h4 class="text-xl font-semibold mb-2">Alice Johnson</h4>
+        <p class="text-gray-600">Customer Service Lead</p>
+        <p class="mt-2">Alice ensures our customers receive exceptional support, addressing their concerns and enhancing their experience.</p>
+      </div>
+
+    </div>
+
+    <!-- Core Values -->
+    <div class="mt-12">
+      <h3 class="text-2xl font-bold mb-6">Our Core Values</h3>
+      <ul class="list-disc list-inside text-lg md:text-xl text-gray-700">
+        <li class="mb-2">Integrity: Upholding the highest standards of honesty and transparency.</li>
+        <li class="mb-2">Reliability: Consistently delivering on our promises with dependability.</li>
+        <li class="mb-2">Customer Satisfaction: Putting our clients first and striving to exceed their expectations.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- Intro Video Section -->
+<section id="video" class="py-12 bg-gray-100">
+  <div class="container mx-auto text-center">
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold mb-8">Watch Our Introduction</h2>
+    
+    <!-- Video Embed -->
+    <div class="relative pb-9/16 overflow-hidden">
+      <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Video Description -->
+    <div class="mt-8">
+      <p class="text-lg md:text-xl leading-relaxed">Discover how BDN EXPRESS is revolutionizing the delivery industry with our fast and reliable services. Watch this video to learn more about our mission, values, and what sets us apart from the rest.</p>
+    </div>
+    
+    <!-- Call-to-Action -->
+    <div class="mt-8">
+      <a href="#contact" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Blog Section -->
+<section id="blog" class="py-12 bg-white">
+  <div class="container mx-auto text-center">
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold mb-8">Our Blog</h2>
+    
+    <!-- Featured Post -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">Featured Post</h3>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <img src="img/featured-post.jpg" alt="Featured Post" class="w-full h-48 object-cover rounded-t-lg mb-4">
+        <h4 class="text-xl font-bold mb-2">How We Ensure Fast and Reliable Deliveries</h4>
+        <p class="text-gray-600 mb-4">Learn about the innovative strategies and technologies we use to ensure your packages and food arrive on time, every time.</p>
+        <a href="#" class="text-red-500 hover:underline">Read More</a>
+      </div>
+    </div>
+    
+    <!-- Recent Blog Posts -->
+    <h3 class="text-2xl font-semibold mb-6">Recent Posts</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Blog Post 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <img src="img/blog-post-1.jpg" alt="Blog Post 1" class="w-full h-48 object-cover rounded-t-lg mb-4">
+        <h4 class="text-xl font-semibold mb-2">The Future of Delivery Services</h4>
+        <p class="text-gray-600 mb-4">Discover the trends and technologies shaping the future of logistics and delivery services.</p>
+        <a href="#" class="text-red-500 hover:underline">Read More</a>
+      </div>
+      
+      <!-- Blog Post 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <img src="img/blog-post-2.jpg" alt="Blog Post 2" class="w-full h-48 object-cover rounded-t-lg mb-4">
+        <h4 class="text-xl font-semibold mb-2">5 Tips for Efficient Packaging</h4>
+        <p class="text-gray-600 mb-4">Get tips on how to package your items efficiently to ensure safe and timely deliveries.</p>
+        <a href="#" class="text-red-500 hover:underline">Read More</a>
+      </div>
+      
+      <!-- Blog Post 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <img src="img/blog-post-3.jpg" alt="Blog Post 3" class="w-full h-48 object-cover rounded-t-lg mb-4">
+        <h4 class="text-xl font-semibold mb-2">Customer Success Stories</h4>
+        <p class="text-gray-600 mb-4">Read about our customers’ experiences and how BDN EXPRESS has made a difference for them.</p>
+        <a href="#" class="text-red-500 hover:underline">Read More</a>
+      </div>
+
+    </div>
+    
+    <!-- Call-to-Action -->
+    <div class="mt-12">
+      <a href="#" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Subscribe to Our Blog</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Optional: JavaScript for mobile menu toggle -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

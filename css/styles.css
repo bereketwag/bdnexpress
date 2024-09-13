@@ -1,0 +1,23 @@
+/* Custom animations for navbar */
+.nav-item {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: #f97316; /* Adjust color to match your design */
+    transform: scale(1.1);
+  }
+  
+  .nav-item:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f97316; /* Adjust color to match your design */
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover:after {
+    width: 100%;
+  }
+  
