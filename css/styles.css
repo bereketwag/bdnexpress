@@ -20,4 +20,26 @@
   .nav-item:hover:after {
     width: 100%;
   }
+
+
+
+
+
+  /* Keyframes for fade-in and slide-up animation */
+@keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation classes */
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+  }
+  
   
